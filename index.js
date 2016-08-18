@@ -9,5 +9,10 @@ function NotesApplication(author) {
 		return "Success";
 		
 	};
+	
+	this.getNote = function(note_id){
+		
+		return String(this.notes[note_id]);
+	};
 }
 module.exports = NotesApplication;

@@ -28,7 +28,7 @@ function NotesApplication {
 	 *
 	 * By Author[author]
 	 */
-	this.listNotes= function(){
+	this.listNotes = function(){
 		for (var i = 0; i < this.notes.length; i++){
 			console.log("ID:", i );
 			console.log(this.notes[i]);
@@ -41,7 +41,7 @@ function NotesApplication {
 	 * note_id is the index of the note in the notes list
 	 * return the content of that note as a string
 	 */
-	this.getNote(note_id){
+	this.getNote = function(note_id){
 		
 		return String(this.notes[note_id]);
 	}
@@ -54,7 +54,7 @@ function NotesApplication {
 	 * [NOTE_CONTENT]
 	 * By Author [author]
 	 */
-	this.search(search_text){
+	this.search = function(search_text){
 		for (var i = 0; i < this.notes.length; i++){
 			if(this.notes.includes(search_text)){
 				console.log("Showing results for", "[ "+ "< " +search_text +" >" + " ]");
@@ -68,7 +68,7 @@ function NotesApplication {
 	/**
 	 * delete the note
 	 */
-	this.remover(note_id){
+	this.remover = function(note_id){
 		for (var i = 0; i < this.notes.length; i++) { 
 			delete this.notes[i];
 			return (this.notes);
@@ -77,7 +77,7 @@ function NotesApplication {
 	/**
 	 *  replace content in note at note_id with new_note
 	 */
-	this.modifyNote(note_id, new_content) {
+	this.modifyNote = function(note_id, new_content) {
 		
 		this.notes[note_id] = new_content;
 		return this.notes;
