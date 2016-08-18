@@ -4,7 +4,7 @@
   "description": "A notes application written with Object Oriented Programming paradigm.",
   "main": "index.js",
   "scripts": {
-    "test": ".node_module/.bin/mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
