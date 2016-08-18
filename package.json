@@ -1,0 +1,30 @@
+{
+  "name": "new-notes-application",
+  "version": "1.0.0",
+  "description": "A notes application written with Object Oriented Programming paradigm.",
+  "main": "index.js",
+  "scripts": {
+    "test": ".node_module/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olahfemi/NewNotesApplication.git"
+  },
+  "keywords": [
+    "notes",
+    "OOP",
+    "node.js",
+    "npm",
+    "JavaScript"
+  ],
+  "author": "Olah Femi Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olahfemi/NewNotesApplication/issues"
+  },
+  "homepage": "https://github.com/olahfemi/NewNotesApplication#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
