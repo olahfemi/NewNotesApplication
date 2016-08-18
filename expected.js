@@ -7,17 +7,19 @@ function NotesApplication {
 	  * it has a notes list/array to store all the notes as an instance property
 	  */ 
 	
-	this.authorCaptured = author;
+	this.author = author;
 	this.notes = [];
 }	
 	/**
 	 * Take the note content as the parameter and 
 	 * add it to the notes list object
 	 */
-	NotesApplication.prototype.create(note_content){
+	 this.create = function(note_content){
+		this.note_content = note_content;
 		this.notes.push(note_content);
 		return this.notes;
-	}
+	};
+}
 	
 	/**
 	 * the content of the notes list this way:
@@ -26,20 +28,20 @@ function NotesApplication {
 	 *
 	 * By Author[author]
 	 */
-	NotesApplication.prototype.listNotes(){
-
+	this.listNotes= function(){
 		for (var i = 0; i < this.notes.length; i++){
 			console.log("ID:", i );
 			console.log(this.notes[i]);
-			console.log("By Author", [this.authorCaptured]);
+			console.log("By Author", [this.author]);
 		}
-	}
+	};
+
 	
 	/**
 	 * note_id is the index of the note in the notes list
 	 * return the content of that note as a string
 	 */
-	NotesApplication.prototype.getNote(note_id){
+	this.getNote(note_id){
 		
 		return String(this.notes[note_id]);
 	}
@@ -52,13 +54,13 @@ function NotesApplication {
 	 * [NOTE_CONTENT]
 	 * By Author [author]
 	 */
-	NotesApplication.prototype.search(search_text){
+	this.search(search_text){
 		for (var i = 0; i < this.notes.length; i++){
 			if(this.notes.includes(search_text)){
 				console.log("Showing results for", "[ "+ "< " +search_text +" >" + " ]");
 				console.log("Note ID: ", i );
 				console.log(this.notes[i]);
-				console.log("By Author", [this.authorCaptured]);
+				console.log("By Author", [this.author]);
 			}
 		}
 	}
@@ -66,7 +68,7 @@ function NotesApplication {
 	/**
 	 * delete the note
 	 */
-	NotesApplication.prototype.remover(note_id){
+	this.remover(note_id){
 		for (var i = 0; i < this.notes.length; i++) { 
 			delete this.notes[i];
 			return (this.notes);
@@ -75,7 +77,7 @@ function NotesApplication {
 	/**
 	 *  replace content in note at note_id with new_note
 	 */
-	NotesApplication.prototype.modifyNote(note_id, new_content) {
+	this.modifyNote(note_id, new_content) {
 		
 		this.notes[note_id] = new_content;
 		return this.notes;
