@@ -2,11 +2,11 @@ var expect = require ("chai").expect;
 var NotesApplication = require("../index.js");
 var work = new NotesApplication("Femi")
 
-describe ("This class called NotesApplication", function(){
+describe ("NotesApplication", function(){
 	//console.log(NotesApplication)
 	//console.log(work)
 	describe("has a function called 'create'", function(){
-		it("that a return a note in an array", function(){
+		it("that returns 'Success' once a note is added", function(){
 			
 			expect(work.create("Andela")).to.equal("Success");
 		});
