@@ -14,5 +14,12 @@ function NotesApplication(author) {
 		
 		return String(this.notes[note_id]);
 	};
+	
+	this.remover = function(note_id){
+		for (var i = 0; i < this.notes.length; i++) { 
+			delete this.notes[i];
+			return (this.notes);
+			}
+	};
 }
 module.exports = NotesApplication;

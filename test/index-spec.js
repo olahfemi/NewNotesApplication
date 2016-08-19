@@ -5,20 +5,31 @@ var work = new NotesApplication("Femi")
 describe ("NotesApplication", function(){
 	//console.log(NotesApplication)
 	//console.log(work)
-	describe("has a function called 'create'", function(){
-		it("that returns 'Success' once a note is added", function(){
+	describe("NotesApplication", function(){
+		it("Returns 'Success' once a note is added", function(){
 			
 			expect(work.create("Andela")).to.equal("Success");
 		});
 	});
 	
-	describe("has a function 'getNote'", function(){
-		it("that returns the note at a specified ID", function(){
+	describe("getNote", function(){
+		it("Returns the note at a specified ID", function(){
 			
-			var made = work.create("Lorem");
-			//var caught = work.getNote()
-			expect(work.getNote(1)).to.equal("Lorem");
+			//work.create("Lorem");
+			expect(work.getNote(0)).to.equal("Andela");
+		});
+	
+	describe("hey", function(){
+		it("Hi", function(){
+			
+			//work.remover
+			expect(work.remover(0)).to.equal(undefined);
 		});
 	});
 	
 });
+
+	});
+	
+	
+	
