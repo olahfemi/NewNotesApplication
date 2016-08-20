@@ -20,5 +20,9 @@ function NotesApplication(author) {
 		this.notes.splice(note_id);
 		return (this.notes);
 	};
+	this.modifyNote = function(note_id, new_content){
+		this.notes[note_id] = new_content;
+		return this.notes;
+	}
 }
 module.exports = NotesApplication;
