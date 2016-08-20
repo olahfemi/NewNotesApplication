@@ -73,7 +73,7 @@ function NotesApplication {
 			delete this.notes[i];
 			return (this.notes);
 			}
-}
+	}
 	/**
 	 *  replace content in note at note_id with new_note
 	 */

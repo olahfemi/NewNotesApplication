@@ -6,7 +6,7 @@ function NotesApplication(author) {
 	this.create = function(note_content){
 		this.note_content = note_content;
 		this.notes.push(note_content);
-		return "Success";
+		return this.notes;
 		
 	};
 	
@@ -16,10 +16,9 @@ function NotesApplication(author) {
 	};
 	
 	this.remover = function(note_id){
-		for (var i = 0; i < this.notes.length; i++) { 
-			delete this.notes[i];
-			return (this.notes);
-			}
+		
+		this.notes.splice(note_id);
+		return (this.notes);
 	};
 }
 module.exports = NotesApplication;
