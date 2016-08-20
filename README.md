@@ -36,6 +36,6 @@
 * remover(note_id) - This function deletes the note at the index note_id of the notes list.
 * modifyNote(note_id, new_content) - This function replaces the content in at 'note_id' with 'new_content'.
 
-### Ensure to put in the necessary validation every step of the way.
+
 
 

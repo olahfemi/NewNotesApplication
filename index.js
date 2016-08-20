@@ -23,6 +23,17 @@ function NotesApplication(author) {
 	this.modifyNote = function(note_id, new_content){
 		this.notes[note_id] = new_content;
 		return this.notes;
+	};
+	this.search = function(search_text){
+			if(this.notes.includes(search_text)){
+				console.log("Showing results for", "[ "+ "< " +search_text +" >" + " ]");
+				console.log("Note ID: ", i );
+				console.log(this.notes[i]);
+				console.log("By Author", [this.author]);
+			}
+			else{
+				return "No note to show";
+			}
 	}
 }
 module.exports = NotesApplication;

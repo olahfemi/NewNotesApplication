@@ -29,6 +29,12 @@ describe ("NotesApplication", function(){
 			assert(work.modifyNote("TIA"), "TIA");
 		});
 	});
+	
+	describe("search", function(){
+		it("Searches the notes and returns all notes containing the text in the required format", function(){
+			assert(work.search( ), "No note to show");
+		});
+	});
 });
 	
 	
